@@ -114,6 +114,7 @@ if (attack == AT_USPECIAL){
     }
 }
 
+
 if (attack == AT_DSPECIAL){
     if (window == 2){
         window_timer = 1;
@@ -126,12 +127,11 @@ if (attack == AT_DSPECIAL){
             }
         }
 
-    if(!special_down){
-        window = 3;
+        if(!special_down){
+            window = 3;
+        }
     }
-
-
-    }
+    
     can_fast_fall = false;
     can_move = false
 }
