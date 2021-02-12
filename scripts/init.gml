@@ -21,7 +21,7 @@ dash_turn_accel = 1.5;
 dash_stop_time = 4;
 dash_stop_percent = 0.5; //the value to multiply your hsp by when going into idle from dash or dashstop
 ground_friction = .5;
-moonwalk_accel = 1.4;
+moonwalk_accel = 1.3;
 
 jump_start_time = 5;
 jump_speed = 11;
