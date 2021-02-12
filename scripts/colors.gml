@@ -1,5 +1,6 @@
 // DEFAULT COLOR
 
+
 // fur
 set_color_profile_slot( 0, 0, 140, 109, 99 );
 set_color_profile_slot_range( 0, 10, 13, 34 );
