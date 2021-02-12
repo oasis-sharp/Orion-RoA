@@ -107,13 +107,13 @@ max_oil = 6;
 oil_recharge = 30;
 oil_timer = 0;
 
-
+// hud positions
 hudx = -2;
 hudy = 34;
 
+//spanner variables
 spanner_id = noone;
 spanner_exists = 0;
-
 
 spanner_vsp = 0;
 spanner_hsp = 0;
@@ -121,12 +121,16 @@ spanner_hsp = 0;
 throwSpeedx = 15;
 throwSpeedy = 15;
 canThrow = 0;
+spanEffCool = 0;
+
+//other stuff
 onOil = 0;
 tempJoy = 0;
 
+//puddle variables
 puddleLength = 10;
 
-spanEffCool = 0;
+
 
 d_wave_land_adj = wave_land_adj;
 d_wave_friction = wave_friction;
