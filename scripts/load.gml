@@ -57,6 +57,7 @@ sprite_change_offset("spannerTrail", 12, 12);
 sprite_change_offset("oilProj", 16, 12);
 sprite_change_offset("oilFloor", 32, -12);
 sprite_change_offset("oilFloorMask", 32, -12);
+sprite_change_offset( "oildrill", 64, 128)
 
 sprite_change_offset("oilmeter", hudx,hudy);
 sprite_change_offset( "oilblob", hudx, hudy)

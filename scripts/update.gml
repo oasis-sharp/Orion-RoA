@@ -14,17 +14,25 @@ else{
     spanner_id = noone;
 }
 
+if(instance_exists(drill_id)){
+    drill_exists = 1;
+}
+else{
+    drill_exists = 0;
+    drill_id = noone;
+}
+
 
 if(can_attack = 1){
     canThrow = 0
 }
 
 if(onOil = 1){
-    wave_land_adj = 2;
-    wave_friction = 0; 
-    dash_speed = 10;
+    wave_land_adj = 1.8;
+    wave_friction = 0.01; 
+    dash_speed = 8;
     ground_friction = 0;
-    initial_dash_speed = 12;
+    initial_dash_speed = 11;
 
 
     leave_ground_max = 14; 
@@ -57,6 +65,12 @@ if(state != PS_ATTACK_AIR and state != PS_ATTACK_GROUND){
 if(spanner_exists and spanEffCool <= 0){
     instance_create(spanner_id.x, spanner_id.y, "obj_article1");
     spanEffCool = 1;
+}
+
+if(drill_exists){
+    if(state == PS_IDLE and place_meeting(x, y, drill_id) and oil < max_oil and up_down){
+        set_attack( AT_EXTRA_1)
+    }
 }
 
 spanEffCool-=1;

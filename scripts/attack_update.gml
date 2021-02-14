@@ -116,22 +116,20 @@ if (attack == AT_USPECIAL){
 
 
 if (attack == AT_DSPECIAL){
-    if (window == 2){
-        window_timer = 1;
-        if(oil < max_oil){
-            oil_timer += 1;
-
-            if(oil_timer > oil_recharge){
-                oil+=1;
-                oil_timer = 0;
-            }
-        }
-
-        if(!special_down){
-            window = 3;
-        }
+    if (window == 2 and window_timer = 1){
+        instance_create(x, y, "obj_article2");
     }
     
     can_fast_fall = false;
     can_move = false
+}
+
+
+if(attack == AT_EXTRA_1){
+    if(window = 2 and drill_exists == 1){
+        if(oil < max_oil and drill_id.d_oil > 0){
+            oil+=1;
+            drill_id.d_oil-=1;
+        }
+    }
 }

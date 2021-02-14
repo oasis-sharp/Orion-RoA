@@ -104,8 +104,8 @@ bubble_y = 8;
 // oil variables
 oil = 6;
 max_oil = 6;
-oil_recharge = 30;
-oil_timer = 0;
+drill_id = noone;
+drill_exists = 0;
 
 // hud positions
 hudx = -2;
@@ -131,7 +131,7 @@ tempJoy = 0;
 puddleLength = 10;
 
 
-
+//default movement variables
 d_wave_land_adj = wave_land_adj;
 d_wave_friction = wave_friction;
 d_initial_dash_speed = initial_dash_speed;
