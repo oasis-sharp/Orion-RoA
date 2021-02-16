@@ -64,12 +64,30 @@ if (attack == AT_FSPECIAL) {
         exit;
     }
 
-    if(place_meeting(x, y+1, asset_get("par_block")) or (hsp = 0 and place_meeting(x, y+1, asset_get( "par_jumpthrough" )))){
+
+    if(variable_instance_exists(id, "drill_create")){
+
+        if(drill_create = 1){
+            hsp = 0;
+            vsp = -5;
+            drill_create = 0;
+        }
+        if(player_id.drill_exists and drill_create != 2){
+            hitbox_timer = length-(player_id.puddleLength-1);
+        }
+
+        if(!player_id.drill_exists){
+            drill_create = 2;
+        }
+    }
+
+
+    if(place_meeting(x, y+1, asset_get("par_block")) or (!free and place_meeting(x, y+1, asset_get( "par_jumpthrough" )))){
 
         if(sprite_index != sprite_get("oilFloor")){
 
+            depth = 10;
             image_index = 0;
-
             sound_play(asset_get("sfx_land_med"));
 
             sprite_index = sprite_get("oilFloor");
