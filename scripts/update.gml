@@ -28,11 +28,11 @@ if(can_attack = 1){
 }
 
 if(onOil = 1){
-    wave_land_adj = 1.8;
-    wave_friction = 0.01; 
-    dash_speed = 8;
-    ground_friction = 0;
-    initial_dash_speed = 11;
+    wave_land_adj = 1.6;
+    wave_friction = 0.05; 
+    dash_speed = 9;
+    ground_friction = 0.3;
+    initial_dash_speed = 8;
 
 
     leave_ground_max = 14; 
