@@ -19,6 +19,10 @@ if(!place_meeting(x-33, y+1, asset_get( "par_block" )) and !place_meeting(x-33, 
     x+=32
 }
 
-with(create_hitbox( AT_FSPECIAL, 1, x, y - 40 )){
+with(create_hitbox(AT_FSPECIAL, 1, x, y - 40 )){
     drill_create = 1;
+    hsp = 0;
+    vsp = -2;
 }
+
+disable_movement = 1;
