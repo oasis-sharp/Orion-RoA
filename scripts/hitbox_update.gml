@@ -68,10 +68,9 @@ if (attack == AT_FSPECIAL) {
     if(variable_instance_exists(id, "drill_create")){
 
         if(drill_create = 1){
-            hsp = 0;
-            vsp = -5;
             drill_create = 0;
         }
+        
         if(player_id.drill_exists and drill_create != 2){
             hitbox_timer = length-(player_id.puddleLength-1);
         }
