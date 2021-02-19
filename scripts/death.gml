@@ -1,3 +1,3 @@
 // comment so it doesnt die 
 
-oil = 3;
+oil = max_oil/2;
