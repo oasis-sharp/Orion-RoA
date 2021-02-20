@@ -147,5 +147,6 @@ d_jump_speed = jump_speed;
 
 spr_oilFloor = sprite_get("oilFloor")
 spr_spanner = sprite_get("spanner")
+spr_spin = sprite_get("spin")
 
 user_event(14);
