@@ -363,7 +363,7 @@ with phone{
 	
 	initTip("Oil on the stage");
 	initTipWords("Oil on the stage gives Orion a much faster waveland and dash, and will also reduce his friction to nearly nothing, so keep the stage covered on oil for maximum mobility!");
-	initTipImage(player_id.spr_oilFloor, -5, fa_center, 1, c_white, 0);
+	initTipImage(player_id.spr_oilFloor, 9, fa_center, 1, c_white, 0);
 	
 	initTip("USpecial's Two Finishers");
 	initTipWords("Press B again during USpecial's free flight to deliver a powerful finisher whose knockback always sends away from Sandbert. Alternatively, press shield and you'll cancel the move into pratfall - monstrously effective combined with Sandbert's notoriously short pratfall landing lag.");
@@ -510,7 +510,7 @@ with phone{
 	
 	initPatch("1.0", "30 Mebruary, 20XX");
 	initPatchWords_ext("HOLY CRAP THE CHARACTER IS OUT!", fa_center, c_white, 0, 1);
-	initPatchImage(other.spr_doublejump, 0, fa_center, 1, c_white, 1);
+	initPatchImage(other.spr_spin, -4, fa_center, 1, c_white, 0);
 	
 }
 
