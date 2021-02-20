@@ -1,5 +1,3 @@
-// comment please dont explode 
-
 if ("oil" not in self) exit;
 
 draw_sprite(sprite_get("oilmeter"), 0, temp_x, temp_y);
