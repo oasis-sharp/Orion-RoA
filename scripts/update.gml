@@ -8,6 +8,7 @@ user_event(14);
 
 if(instance_exists(spanner_id)){
     spanner_exists = 1;
+    spanEffCool-=1;
 }
 else{
     spanner_exists = 0;
@@ -27,6 +28,8 @@ if(can_attack = 1){
     canThrow = 0
 }
 
+animOil = 0;
+
 if(onOil = 1){
     wave_land_adj = 1.6;
     wave_friction = 0.05; 
@@ -38,10 +41,12 @@ if(onOil = 1){
     leave_ground_max = 14; 
     max_jump_hsp = 10; 
     jump_speed = 13;
+    waveland_sound = asset_get("sfx_waveland_eta");
+
 
 }
 else{
-
+    waveland_sound = asset_get("sfx_waveland_zet");
     wave_land_adj = d_wave_land_adj; 
     wave_friction = d_wave_friction; 
     initial_dash_speed = d_initial_dash_speed;
@@ -56,6 +61,7 @@ else{
 
 if(onOil = 1){
     onOil = 0;
+    animOil = 1;
 }
 
 if(state != PS_ATTACK_AIR and state != PS_ATTACK_GROUND){
@@ -64,7 +70,7 @@ if(state != PS_ATTACK_AIR and state != PS_ATTACK_GROUND){
 
 if(spanner_exists and spanEffCool <= 0){
     instance_create(spanner_id.x, spanner_id.y, "obj_article1");
-    spanEffCool = 1;
+    spanEffCool = 2;
 }
 
 if(drill_exists){
@@ -72,6 +78,4 @@ if(drill_exists){
         set_attack( AT_EXTRA_1)
     }
 }
-
-spanEffCool-=1;
 
