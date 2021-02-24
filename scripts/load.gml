@@ -29,6 +29,7 @@ sprite_change_offset("roll_forward", 64, 128);
 sprite_change_offset("roll_backward", 64, 128);
 sprite_change_offset("airdodge", 64, 110);
 sprite_change_offset("waveland", 64, 126);
+sprite_change_offset("wavelandEff", 64, 126);
 sprite_change_offset("tech", 32, 62);
 
 sprite_change_offset("jab", 64, 94);
@@ -61,3 +62,4 @@ sprite_change_offset( "oildrill", 64, 128)
 
 sprite_change_offset("oilmeter", hudx,hudy);
 sprite_change_offset( "oilblob", hudx, hudy)
+sprite_change_offset("oilWaveland",64,126);
