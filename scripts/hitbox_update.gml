@@ -50,9 +50,6 @@ if (attack == AT_NSPECIAL) {
         exit;
     }
 
-
-
-
 }
 
 
