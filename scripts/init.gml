@@ -26,7 +26,7 @@ moonwalk_accel = 1.3;
 jump_start_time = 5;
 jump_speed = 11;
 short_hop_speed = 7;
-djump_speed = 12;
+djump_speed = 11;
 leave_ground_max = 5; //the maximum hsp you can have when you go from grounded to aerial without jumping
 max_jump_hsp = 6; //the maximum hsp you can have when jumping from the ground
 air_max_speed = 5; //the maximum hsp you can accelerate to when in a normal aerial state
@@ -57,9 +57,9 @@ crouch_active_frames = 4;
 crouch_recovery_frames = 3;
 
 //parry animation frames
-dodge_startup_frames = 1;
-dodge_active_frames = 3;
-dodge_recovery_frames = 3;
+dodge_startup_frames = 4;
+dodge_active_frames = 2;
+dodge_recovery_frames = 6;
 
 //tech animation frames
 tech_active_frames = 3;
@@ -126,6 +126,7 @@ spanEffCool = 0;
 //other stuff
 onOil = 0;
 tempJoy = 0;
+animOil = 0;
 
 //puddle variables
 puddleLength = 10;
@@ -142,6 +143,8 @@ d_ground_friction = ground_friction;
 d_leave_ground_max = leave_ground_max;
 d_max_jump_hsp = max_jump_hsp;
 d_jump_speed = jump_speed;
+
+wavelandEffect = hit_fx_create( sprite_get("wavelandEff"), 12);
 
 //==== MUNOPHONE ====//
 
