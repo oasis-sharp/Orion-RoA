@@ -6,7 +6,7 @@ if (attack == AT_NSPECIAL || attack == AT_FSPECIAL || attack == AT_DSPECIAL || a
 if (attack == AT_NSPECIAL){
     if(special_pressed){
         if(spanner_exists = 1){
-            window = 4;
+            window = 5;
             window_timer = 0;  
         }
     }
@@ -15,17 +15,19 @@ if (attack == AT_NSPECIAL){
             
         }
 
-
-    if(window = 1){
+    if(window < 3){
         vsp*=0;
         hsp*=0.9;
 
         can_fast_fall = 0;
         can_move = 0;
         can_jump = 1;
+    }
+
+    if(window = 2){
     
        if(!special_down){
-            window_timer = get_window_value(AT_NSPECIAL, 1, AG_WINDOW_LENGTH)
+            window_timer = get_window_value(AT_NSPECIAL, 2, AG_WINDOW_LENGTH)
         }
 
         if(shield_pressed){
@@ -42,6 +44,10 @@ if (attack == AT_NSPECIAL){
 
 
         if(tempJoy != noone){
+
+            var throwDir = tempJoy;
+
+
             spanner_hsp = lengthdir_x(throwSpeedx, tempJoy)
             spanner_vsp = lengthdir_y(throwSpeedy, tempJoy)
         }
