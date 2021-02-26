@@ -118,6 +118,8 @@ spanner_exists = 0;
 spanner_vsp = 0;
 spanner_hsp = 0;
 
+spanner_bounce = 0;
+
 throwSpeedx = 15;
 throwSpeedy = 15;
 canThrow = 0;
