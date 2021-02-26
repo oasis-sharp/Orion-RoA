@@ -7,6 +7,7 @@ if (attack == AT_NSPECIAL) {
         player_id.spanner_id = id;
         destroy_fx = 305;
         hit_effect = 305;
+        spanner_bounce = 0;
     }
     
     transcendent = 1;
@@ -24,7 +25,7 @@ if (attack == AT_NSPECIAL) {
 
         vsp*=0.8;
         hsp*=0.9;
-
+        spanner_bounce += 1;
         if(abs(hsp) < 2 and abs(vsp) < 2){
             instance_destroy();
             exit;
@@ -35,12 +36,17 @@ if (attack == AT_NSPECIAL) {
 
         vsp*=0.8;
         hsp*=0.9; 
-        
+        spanner_bounce += 1;
         if(abs(hsp) < 2 and abs(vsp) < 2){
             instance_destroy();
             exit;
         }       
     
+    }
+
+    if(spanner_bounce > 4){
+        instance_destroy();
+        exit;
     }
  
     kb_angle = point_direction(x, y, player_id.x, player_id.y-1*(abs(abs(x)-abs(player_id.x))));
