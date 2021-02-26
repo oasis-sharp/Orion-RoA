@@ -46,6 +46,7 @@ sprite_change_offset("fstrong", 64, 94);
 sprite_change_offset("ustrong", 64, 158);
 sprite_change_offset("dstrong", 64, 94);
 sprite_change_offset("nspecial", 64, 126);
+sprite_change_offset("nspecial_air", 64, 110);
 sprite_change_offset("fspecial", 64, 94);
 sprite_change_offset("uspecial", 64, 94);
 sprite_change_offset("dspecial", 64, 94);
@@ -63,3 +64,4 @@ sprite_change_offset( "oildrill", 64, 128)
 sprite_change_offset("oilmeter", hudx,hudy);
 sprite_change_offset( "oilblob", hudx, hudy)
 sprite_change_offset("oilWaveland",64,126);
+sprite_change_offset("spin", 64, 126);
