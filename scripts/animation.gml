@@ -6,3 +6,6 @@ if(animOil){
     }
 }
 
+if(attack == AT_NSPECIAL and state == PS_ATTACK_AIR){
+    sprite_index = sprite_get("nspecial_air")
+}
