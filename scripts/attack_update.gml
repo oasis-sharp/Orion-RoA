@@ -4,10 +4,12 @@ if (attack == AT_NSPECIAL || attack == AT_FSPECIAL || attack == AT_DSPECIAL || a
 }
 
 if (attack == AT_NSPECIAL){
+
     if(special_pressed){
         if(spanner_exists = 1){
             window = 5;
             window_timer = 0;  
+
         }
     }
         if(!joy_pad_idle){
@@ -16,12 +18,18 @@ if (attack == AT_NSPECIAL){
         }
 
     if(window < 3){
-        vsp*=0;
-        hsp*=0.9;
 
         can_fast_fall = 0;
         can_move = 0;
         can_jump = 1;
+    }
+
+    if(window = 5){
+        if(collision_rectangle( x+32, y+32, x-32, y-32, spanner_id, false, true)){
+            instance_destroy(spanner_id);
+            spanner_exists = 0;
+            window = 2;
+        }
     }
 
     if(window = 2){
@@ -29,6 +37,13 @@ if (attack == AT_NSPECIAL){
        if(!special_down){
             window_timer = get_window_value(AT_NSPECIAL, 2, AG_WINDOW_LENGTH)
         }
+        else{
+            if(free){
+                vsp=0;
+                hsp*=0.95;
+            }
+        }
+
 
         if(shield_pressed){
             window = 3;
@@ -41,14 +56,24 @@ if (attack == AT_NSPECIAL){
             hsp = 0
         }
 
-
-
         if(tempJoy != noone){
 
-            var throwDir = tempJoy;
+            var throwDir = 1;
+
+        if(spr_dir = 1){
+            if(tempJoy >= 90 and tempJoy < 270){
+                throwDir = -1;
+            }
+        }
+
+        if(spr_dir = -1){
+            if(!(tempJoy >= 90 and tempJoy < 270)){
+                throwDir = -1;
+            }
+        }
 
 
-            spanner_hsp = lengthdir_x(throwSpeedx, tempJoy)
+            spanner_hsp = lengthdir_x(throwSpeedx*throwDir, tempJoy)
             spanner_vsp = lengthdir_y(throwSpeedy, tempJoy)
         }
         else{
