@@ -147,6 +147,7 @@ d_max_jump_hsp = max_jump_hsp;
 d_jump_speed = jump_speed;
 
 wavelandEffect = hit_fx_create( sprite_get("wavelandEff"), 12);
+spanEffect = hit_fx_create( sprite_get("spannerTrail"), 20);
 
 //==== MUNOPHONE ====//
 
