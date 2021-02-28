@@ -69,8 +69,10 @@ if(state != PS_ATTACK_AIR and state != PS_ATTACK_GROUND){
 }
 
 if(spanner_exists and spanEffCool <= 0){
-    instance_create(spanner_id.x, spanner_id.y, "obj_article1");
-    spanEffCool = 2;
+    with(spawn_hit_fx( spanner_id.x, spanner_id.y, spanEffect)){
+        draw_angle = player_id.spanner_id.proj_angle;
+    }
+    spanEffCool = 1;
 }
 
 if(drill_exists){
