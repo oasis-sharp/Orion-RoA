@@ -104,6 +104,10 @@ if (attack == AT_FSPECIAL){
 
 }
 
+if (attack == AT_JAB && window == 1){
+    clear_button_buffer( PC_ATTACK_PRESSED );
+}
+
 
 if (attack == AT_USPECIAL){
     if (window == 1 && window_timer == 1){
