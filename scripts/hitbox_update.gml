@@ -62,6 +62,9 @@ if (attack == AT_NSPECIAL) {
 
 if (attack == AT_FSPECIAL) {
 
+    destroy_fx = 1;
+    hit_effect = 1;
+
     if(x > room_width or x < 0 or y > room_height){
         instance_destroy();
         exit;
