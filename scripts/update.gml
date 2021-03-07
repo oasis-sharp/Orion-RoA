@@ -23,7 +23,6 @@ else{
     drill_id = noone;
 }
 
-
 if(can_attack = 1){
     canThrow = 0
 }
@@ -36,7 +35,6 @@ if(onOil = 1){
     dash_speed = 9;
     ground_friction = 0.3;
     initial_dash_speed = 8;
-
 
     leave_ground_max = 14; 
     max_jump_hsp = 10; 
@@ -77,7 +75,7 @@ if(spanner_exists and spanEffCool <= 0){
 
 if(drill_exists){
     if(state == PS_IDLE and place_meeting(x, y, drill_id) and oil < max_oil and up_down){
-        set_attack( AT_EXTRA_1)
+        set_attack(AT_EXTRA_1);
     }
 }
 
